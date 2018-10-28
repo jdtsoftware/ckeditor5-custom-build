@@ -10,6 +10,7 @@ import InlineEditorBase from '@ckeditor/ckeditor5-editor-inline/src/inlineeditor
 // Default
 import Essentials from '@ckeditor/ckeditor5-essentials/src/essentials';
 import Autoformat from '@ckeditor/ckeditor5-autoformat/src/autoformat';
+import Alignment from '@ckeditor/ckeditor5-alignment/src/alignment';
 import Bold from '@ckeditor/ckeditor5-basic-styles/src/bold';
 import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
@@ -39,6 +40,7 @@ class InlineEditor extends InlineEditorBase {}
 const plugins = [
 	Essentials,
 	Autoformat,
+        Alignment,
 	Bold,
 	Italic,
 	Underline,
@@ -65,7 +67,8 @@ const config = {
 		items: [
 			'heading',
 			'|',
-			'bold',
+		        'alignment',
+                	'bold',
 			'italic',
 			'underline',
 			'strikethrough',
@@ -82,6 +85,9 @@ const config = {
 			'redo'
 		]
 	},
+        alignment: {
+                options: [ 'left', 'center', 'right', 'justify' ]
+        },
 	image: {
 		toolbar: [
 			'imageTextAlternative',
