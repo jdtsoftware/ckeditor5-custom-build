@@ -28,7 +28,11 @@
 
 <script src="../build/ckeditor.js"></script>
 <script>
-	ClassicEditor.create( document.querySelector( '#editor' ) )
+	CKEDITOR.ClassicEditor.create( document.querySelector( '#editor' ), {
+		selfUpload: {
+			uploadUrl: 'http://127.0.0.1/my-upload-endpoint'
+		}
+	} )
 		.then( editor => {
 			window.editor = editor;
 		} )
