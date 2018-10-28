@@ -30,7 +30,7 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
 // Custom
-import SelfUpload from 'ckeditor5-self-image/src/selfupload';
+// import SelfUpload from 'ckeditor5-self-image/src/selfupload';
 
 class ClassicEditor extends ClassicEditorBase {}
 class InlineEditor extends InlineEditorBase {}
@@ -51,7 +51,6 @@ const plugins = [
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	SelfUpload,
 	Link,
 	List,
 	MediaEmbed,
