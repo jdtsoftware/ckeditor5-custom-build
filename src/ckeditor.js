@@ -33,6 +33,9 @@ import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 // Custom
 // import SelfUpload from 'ckeditor5-self-image/src/selfupload';
 
+// Icons
+import alignJustifyIcon from '@ckeditor/ckeditor5-alignment/theme/icons/align-justify.svg';
+
 class ClassicEditor extends ClassicEditorBase {}
 class InlineEditor extends InlineEditorBase {}
 
@@ -92,6 +95,7 @@ const config = {
 		toolbar: [
 			'imageTextAlternative',
 			'|',
+                        'imageStyle:inline',
                         'imageStyle:alignLeft',
 			'imageStyle:full',
 			'imageStyle:alignRight'
@@ -99,7 +103,8 @@ const config = {
                 styles: [
                     'full',
                     'alignLeft',
-                    'alignRight'
+                    'alignRight',
+                    {name: 'inline', title: 'Inline Images', icon: alignJustifyIcon, className: 'image-style-align-inline'}
                 ]
 	},
 	table: {
