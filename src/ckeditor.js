@@ -92,9 +92,15 @@ const config = {
 		toolbar: [
 			'imageTextAlternative',
 			'|',
+                        'imageStyle:alignLeft',
 			'imageStyle:full',
-			'imageStyle:side'
-		]
+			'imageStyle:alignRight'
+		],
+                styles: [
+                    'full',
+                    'alignLeft',
+                    'alignRight'
+                ]
 	},
 	table: {
 		contentToolbar: [
