@@ -30,9 +30,6 @@ import Paragraph from '@ckeditor/ckeditor5-paragraph/src/paragraph';
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
-// Custom
-// import SelfUpload from 'ckeditor5-self-image/src/selfupload';
-
 // Icons
 import alignJustifyIcon from '@ckeditor/ckeditor5-alignment/theme/icons/align-justify.svg';
 

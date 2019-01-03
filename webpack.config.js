@@ -12,6 +12,7 @@ const webpack = require( 'webpack' );
 const { bundler, styles } = require( '@ckeditor/ckeditor5-dev-utils' );
 const CKEditorWebpackPlugin = require( '@ckeditor/ckeditor5-dev-webpack-plugin' );
 const UglifyJsWebpackPlugin = require( 'uglifyjs-webpack-plugin' );
+const MiniCssExtractPlugin = require( 'mini-css-extract-plugin' );
 
 module.exports = {
 	devtool: 'source-map',
@@ -53,6 +54,9 @@ module.exports = {
 		new webpack.BannerPlugin( {
 			banner: bundler.getLicenseBanner(),
 			raw: true
+		} ),
+		new MiniCssExtractPlugin( {
+			filename: 'styles.css'
 		} )
 	],
 
@@ -65,12 +69,8 @@ module.exports = {
 			{
 				test: /\.css$/,
 				use: [
-					{
-						loader: 'style-loader',
-						options: {
-							singleton: true
-						}
-					},
+					MiniCssExtractPlugin.loader,
+					'css-loader',
 					{
 						loader: 'postcss-loader',
 						options: styles.getPostCssConfig( {
